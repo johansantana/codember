@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@node-fetch/*": ["node_modules/node-fetch/*"]
+    }
+  },
+  "include": ["src/**/*", "src/index.js"]
+}

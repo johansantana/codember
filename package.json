@@ -1,0 +1,17 @@
+{
+  "name": "codember",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "tsc && node --no-warnings src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "18.11.9",
+    "typescript": "4.8.4"
+  }
+}
