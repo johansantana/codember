@@ -24,7 +24,14 @@ function parseUsers(input: string): any[] {
 }
 
 function isValidUser(obj: User) {
-  return 'usr' in obj && 'eme' in obj && 'psw' in obj && 'age' in obj && 'loc' in obj && 'fll' in obj
+  return (
+    'usr' in obj &&
+    'eme' in obj &&
+    'psw' in obj &&
+    'age' in obj &&
+    'loc' in obj &&
+    'fll' in obj
+  )
 }
 
 async function getUsers() {
