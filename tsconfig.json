@@ -3,11 +3,11 @@
     "module": "ESNext",
     "target": "ESNext",
     "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "sourceMap": true,
-    "baseUrl": ".",
-    "paths": {
-      "@node-fetch/*": ["node_modules/node-fetch/*"]
-    }
+    "baseUrl": "."
   },
-  "include": ["src/**/*", "src/index.js"]
+  "include": ["src/**/*"]
 }
