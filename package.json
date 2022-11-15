@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "01": "tsc && node --no-warnings src/01"
+    "all": "tsc && node --no-warnings src",
+    "01": "tsc && node --no-warnings src/01",
+    "02": "tsc && node --no-warnings src/02"
   },
   "keywords": [],
   "author": "",
