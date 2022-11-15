@@ -1,11 +1,6 @@
-export interface User {
-  usr: string
-  eme: string
-  psw: string
-  age: string
-  loc: string
-  fll: number
-}
+import { readFileSync } from 'fs'
+
+const keys = ['usr', 'eme', 'psw', 'age', 'loc', 'fll']
 
 function parseUsers(input: string): any[] {
   const resultArray = input.split('\n\n')
@@ -23,27 +18,18 @@ function parseUsers(input: string): any[] {
   })
 }
 
-function isValidUser(obj: User) {
-  return (
-    'usr' in obj &&
-    'eme' in obj &&
-    'psw' in obj &&
-    'age' in obj &&
-    'loc' in obj &&
-    'fll' in obj
-  )
+function isValidUser(obj: any) {
+  return keys.every(key => {
+    return key in obj
+  })
 }
 
 async function getUsers() {
-  return fetch('https://codember.dev/users.txt')
-    .then(res => res.text())
-    .then(data => {
-      const users = parseUsers(data).filter(isValidUser)
-      const lastValidUser: string = users.at(-1).usr
-
-      return `${users.length}${lastValidUser}`
-    })
+  const data = readFileSync(new URL('users.txt', import.meta.url), 'utf8')
+  const users = parseUsers(data).filter(isValidUser)
+  const lastValidUser = users.at(-1).usr
+  return `${users.length}${lastValidUser}`
 }
 
-const result = await getUsers()
+export const result = await getUsers()
 console.log({ result })

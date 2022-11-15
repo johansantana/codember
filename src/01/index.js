@@ -1,3 +1,5 @@
+import { readFileSync } from 'fs';
+const keys = ['usr', 'eme', 'psw', 'age', 'loc', 'fll'];
 function parseUsers(input) {
     const resultArray = input.split('\n\n');
     return resultArray.map(user => {
@@ -11,18 +13,16 @@ function parseUsers(input) {
     });
 }
 function isValidUser(obj) {
-    return 'usr' in obj && 'eme' in obj && 'psw' in obj && 'age' in obj && 'loc' in obj && 'fll' in obj;
-}
-async function getUsers() {
-    return fetch('https://codember.dev/users.txt')
-        .then(res => res.text())
-        .then(data => {
-        const users = parseUsers(data).filter(isValidUser);
-        const lastValidUser = users.at(-1).usr;
-        return `${users.length}${lastValidUser}`;
+    return keys.every(key => {
+        return key in obj;
     });
 }
-const result = await getUsers();
+async function getUsers() {
+    const data = readFileSync(new URL('users.txt', import.meta.url), 'utf8');
+    const users = parseUsers(data).filter(isValidUser);
+    const lastValidUser = users.at(-1).usr;
+    return `${users.length}${lastValidUser}`;
+}
+export const result = await getUsers();
 console.log({ result });
-export {};
 //# sourceMappingURL=index.js.map
