@@ -10,7 +10,7 @@ const format = (text: string) => {
       return
     }
     currentCode += c
-    if (Number(currentCode) >= 97 && Number(currentCode) <= 122) {
+    if (Number(currentCode) >= 41 && Number(currentCode) <= 122) {
       codesArray.push(currentCode)
       currentCode = ''
     }
