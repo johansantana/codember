@@ -3,6 +3,5 @@ node_modules/
 .vscode/
 src/**/*.map
 src/**/*.js
-!src/test/*.js
 package-lock.json
 pnpm-lock.yaml
