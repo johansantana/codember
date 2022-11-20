@@ -18,7 +18,7 @@ const format = (text: string) => {
   return codesArray
 }
 
-const decodeASCII = (text: string): string => {
+export const decodeASCII = (text: string): string => {
   const codeArrays = format(text)
   return codeArrays
     .map(code => {

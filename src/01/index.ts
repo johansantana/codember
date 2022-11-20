@@ -2,7 +2,7 @@ import { readFileSync } from 'fs'
 
 const keys = ['usr', 'eme', 'psw', 'age', 'loc', 'fll']
 
-function parseUsers(input: string): any[] {
+export function parseUsers(input: string): any[] {
   const resultArray = input.split('\n\n')
 
   return resultArray.map(user => {
@@ -18,7 +18,7 @@ function parseUsers(input: string): any[] {
   })
 }
 
-function isValidUser(obj: any) {
+export function isValidUser(obj: any) {
   return keys.every(key => {
     return key in obj
   })
