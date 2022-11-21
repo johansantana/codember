@@ -9,7 +9,7 @@
 
 ```
 
-My solution to [https://codember.dev](codember.dev) challenges using Typescript
+My solution to [codember.dev](https://codember.dev) challenges using Typescript
 
 | Solutions               |
 | ----------------------- |
