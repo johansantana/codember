@@ -28,7 +28,7 @@ npm run all
 ```bash
 npm run [solution_number]
 
-# example npm run 01
+# example: npm run 01
 ```
 
 ### Run tests
