@@ -16,6 +16,7 @@ My solution to [codember.dev](https://codember.dev) challenges using Typescript
 | [Challenge 01](src/01/) |
 | [Challenge 02](src/02/) |
 | [Challenge 03](src/03/) |
+| [Challenge 04](src/04/) |
 
 ### Run all solutions
 
