@@ -27,5 +27,5 @@ export const decodeASCII = (text: string): string => {
     .join('')
 }
 
-export const result = decodeASCII(TEXT)
+const result = decodeASCII(TEXT)
 console.log({ result })
