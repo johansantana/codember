@@ -15,5 +15,5 @@ for (let i = 11098; i <= 98123; i++) {
   if (isValidPass(i)) passwords.push(i)
 }
 
-const result = `${passwords.length}-${passwords[55]}`
+export const result = `${passwords.length}-${passwords[55]}`
 console.log({ result })

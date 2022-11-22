@@ -24,5 +24,5 @@ export const findLargestZebra = (colorList: string[]): [number, string] => {
 }
 
 const colors = getColors()
-const result = findLargestZebra(colors).join('@')
+export const result = findLargestZebra(colors).join('@')
 console.log({ result })

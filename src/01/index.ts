@@ -31,5 +31,5 @@ async function getUsers() {
   return `${users.length}${lastValidUser}`
 }
 
-const result = await getUsers()
+export const result = await getUsers()
 console.log({ result })
