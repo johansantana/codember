@@ -1,14 +1,18 @@
 const passwords = []
 
 export const isValidPass = (n: number): boolean => {
-  const matches = String(n).match(/5/g)
-  if (!matches || matches.length < 2) return false
+  if (!String(n).includes('55')) return false
 
-  for (let i = 0; i <= String(n).length; i++) {
-    const currentDigit = String(n)[i]
-    if (Number(currentDigit) > Number(String(n)[i + 1])) return false
-  }
-  return true
+  let result = true
+  String(n)
+    .split('')
+    .forEach((x, idx) => {
+      if (Number(x) > Number(String(n)[idx + 1])) {
+        result = false
+        return
+      }
+    })
+  return result
 }
 
 for (let i = 11098; i <= 98123; i++) {
