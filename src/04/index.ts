@@ -2,7 +2,7 @@ const passwords = []
 
 export const isValidPass = (n: number): boolean => {
   const matches = String(n).match(/5/g)
-  if (String(n).length !== 5 || !matches || matches.length < 2) return false
+  if (!matches || matches.length < 2) return false
 
   for (let i = 0; i <= String(n).length; i++) {
     const currentDigit = String(n)[i]
