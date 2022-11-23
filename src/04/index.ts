@@ -1,21 +1,16 @@
 const passwords = []
 
 export const isValidPass = (n: number): boolean => {
-  if (!String(n).includes('55')) return false
+  const string = n.toString()
+  if (!string.includes('55')) return false
 
-  let result = true
-  String(n)
-    .split('')
-    .forEach((x, idx) => {
-      if (Number(x) > Number(String(n)[idx + 1])) {
-        result = false
-        return
-      }
-    })
-  return result
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] > string[i + 1]) return false
+  }
+  return true
 }
 
-for (let i = 11098; i <= 98123; i++) {
+for (let i = 11155; i <= 55999; i++) {
   if (isValidPass(i)) passwords.push(i)
 }
 
