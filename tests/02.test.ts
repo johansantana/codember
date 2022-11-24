@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert'
-import { decodeASCII } from '../02/index.js'
+import { decodeASCII } from '../src/02/index.js'
 
 test('Test 01', () => {
   assert.strictEqual(decodeASCII('109105100117'), 'midu')

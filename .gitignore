@@ -1,7 +1,11 @@
 node_modules/
 
 .vscode/
+
 src/**/*.map
 src/**/*.js
+tests/**/*.js
+tests/**/*.map
+
 package-lock.json
 pnpm-lock.yaml

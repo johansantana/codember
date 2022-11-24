@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert'
-import { isValidPass } from '../04/index.js'
+import { isValidPass } from '../src/04/index.js'
 
 test('Test 01', () => {
   const password = 55678

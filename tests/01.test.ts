@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert'
-import { parseUsers, isValidUser } from '../01/index.js'
+import { parseUsers, isValidUser } from '../src/01/index.js'
 
 test('Test 01', () => {
   const user = 'usr:@midudev eme:mi@gmail.com psw:123456 age:22 loc:bcn fll:82'
