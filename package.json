@@ -10,6 +10,7 @@
     "02": "tsc && node --no-warnings src/02",
     "03": "tsc && node --no-warnings src/03",
     "04": "tsc && node --no-warnings src/04",
+    "05": "tsc && node --no-warnings src/05",
     "test": "tsc && node --test tests/"
   },
   "keywords": [],
